@@ -24,7 +24,7 @@ public class BackgroundController {
     @Autowired
     private BackgroundDao backgroundDao;
 
-    @ApiOperation(value = "base64", notes = "测试数据:")
+    @ApiOperation(value = "base6", notes = "测试数据:")
     @PostMapping("/base64_img")
     public boolean GenerateImage(@RequestBody Map map) {// 对字节数组字符串进行Base64解码并生成图片
         System.out.println(map.get("imgStr"));
