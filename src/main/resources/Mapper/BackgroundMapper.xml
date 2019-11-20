@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zty.signature.dao.BackgroundDao">
+    <!--增加签名照-->
+    <insert id="add_background" parameterType="java.util.Map">
+        insert into background (imgurl,img2url,createtime) values (#{imgurl},#{img2url},now())
+    </insert>
+
+    <!--查询全部照片-->
+    <select id="find" resultType="com.zty.signature.entity.Background">
+        select * from background order by createtime desc
+    </select>
+</mapper>
